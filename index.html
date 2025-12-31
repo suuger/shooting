@@ -10,6 +10,9 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="2인용게임, 웹게임, 슈팅게임, 하드코어아레나, 무료게임, 친구와함께, IO게임, 무설치게임, 1인용게임, 2인용">
+    <meta name="author" content="Suuger">
+    <meta name="description" content="설치 없이 브라우저에서 바로 즐기는 극한의 2인용 생존 슈팅! 지금 바로 친구와 실력을 겨뤄보세요.">
     <title>2P Hardcore Arena: Survive or Die</title>
     
     <link rel="icon" href="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-rocket-space-vitaliy-gorbachev-flat-vitaly-gorbachev.png" type="image/png">
@@ -447,6 +450,13 @@ function useBomb() {
 }
 
 function startGame() {
+    // 분석 코드 추가: 누가 시작 버튼을 눌렀나?
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({'event': 'game_start'});
+
+    document.getElementById('menu').style.display = 'none';
+    gameState = 'playing';
+
     gameMode = document.getElementById('mode-select').value || "coop";
     p1 = createPlayer(canvas.width/2 - 80, canvas.height/2, '#ff4444');
     p2 = createPlayer(canvas.width/2 + 80, canvas.height/2, '#4444ff');
@@ -732,6 +742,14 @@ function update(time) {
     document.getElementById('p2-spec-fill').style.width = (p2.specCharge/p2.specMax*100) + "%";
 
     if ((gameMode === "coop" && (p1.hp <= 0 || p2.hp <= 0)) || (gameMode === "solo" && p1.hp <= 0)) {
+        // [추가] 구글 애널리틱스(GTM)로 게임 종료 이벤트와 점수 전송
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'game_over',
+            'final_score': score,
+            'game_mode': gameMode
+        });
+
         gameActive = false;
         showShareModal();
         return;
