@@ -1,0 +1,21 @@
+{
+  "name": "2P Hardcore Arena: Survive or Die",
+  "short_name": "HardcoreArena",
+  "description": "극한의 2인용 생존 슈팅 아레나",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#00ffff",
+  "icons": [
+    {
+      "src": "https://github.com/user-attachments/assets/ee3395b2-84a4-45d8-9c6f-ca00b78affbf",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://github.com/user-attachments/assets/ee3395b2-84a4-45d8-9c6f-ca00b78affbf",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
