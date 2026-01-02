@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5Q3G9FLG');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
-    <title>개발 기록 및 패치노트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패치노트 - 2P Hardcore Arena</title>
     <style>
-        body { background-color: #121212; color: white; font-family: sans-serif; padding: 50px; line-height: 1.8; }
+        body { background-color: #121212; color: #ddd; font-family: 'Noto Sans KR', sans-serif; padding: 20px; line-height: 1.6; }
         .container { max-width: 800px; margin: 0 auto; }
-        h1 { color: #00ffff; border-bottom: 2px solid #00ffff; padding-bottom: 10px; }
-        .update-item { background: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .date { color: #888; font-size: 0.9em; }
-        a { color: #ff00ff; text-decoration: none; }
+        h1 { color: #00ffff; border-bottom: 2px solid #00ffff; padding-bottom: 15px; margin-bottom: 30px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #ff00ff; text-decoration: none; font-weight: bold; border: 1px solid #ff00ff; padding: 8px 16px; border-radius: 4px; transition: 0.3s; }
+        .back-btn:hover { background: #ff00ff; color: white; }
+        
+        .update-card { background: #1e1e1e; border-left: 4px solid #00ffff; padding: 20px; margin-bottom: 25px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .version { color: #00ffff; font-weight: bold; font-size: 1.2em; }
+        .date { color: #888; font-size: 0.9em; margin-left: 10px; }
+        .tag { display: inline-block; font-size: 0.8em; padding: 2px 6px; border-radius: 4px; margin-right: 5px; color: white; }
+        .tag.new { background: #ff0055; }
+        .tag.fix { background: #00aa55; }
+        .tag.sys { background: #5555ff; }
+        ul { margin-top: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q3G9FLG"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-        <h1>🛠 개발 기록 & 패치노트</h1>
-        <p><a href="index.html">← 게임으로 돌아가기</a></p>
+        <a href="index.html" class="back-btn">← 게임으로 돌아가기</a>
+        <h1>🛠️ 개발 패치노트 History</h1>
 
-        <div class="update-item">
-            <div class="date">2025.12.27</div>
-            <h3>시스템 안정화 및 로직 수정</h3>
+        <div class="update-card">
+            <span class="tag new">New</span> <span class="tag sys">System</span>
+            <span class="version">v1.1.0 - 앱 설치 지원 및 최적화</span>
+            <span class="date">2026.01.02</span>
             <ul>
-                <li>지뢰(Mine)가 지정된 좌표에 정확히 생성되도록 좌표 시스템 수정</li>
-                <li>코드 가독성을 위해 전체 로직 한글 주석 작업 완료</li>
-                <li>GitHub Pages 배포 및 외부 접속 환경 구축</li>
+                <li><b>PWA(Progressive Web App) 적용:</b> 이제 브라우저 메뉴에서 [앱 설치]를 눌러 게임을 설치할 수 있습니다. (전체 화면 지원)</li>
+                <li><b>SEO 최적화:</b> 검색 엔진 노출 개선 및 공유 시 미리보기 이미지/텍스트가 개선되었습니다.</li>
+                <li><b>데이터 분석 연동:</b> 플레이어 이탈 구간 및 난이도 조절을 위한 GA4/GTM 시스템이 도입되었습니다.</li>
             </ul>
         </div>
 
-        <div class="update-item">
-            <h3>향후 업데이트 계획</h3>
+        <div class="update-card">
+            <span class="tag fix">Balance</span>
+            <span class="version">v1.0.5 - 난이도 및 조작감 개선</span>
+            <span class="date">2025.12.28</span>
             <ul>
-                <li>아이템 상점 시스템 추가 예정</li>
-                <li>온라인 랭킹 보드 도입 검토 중</li>
+                <li>초반 보스 등장 타이밍 조정 (난이도 완화)</li>
+                <li>모바일 터치 조작 감도 개선</li>
+                <li>게임 오버 시 공유하기 기능 버그 수정</li>
             </ul>
         </div>
+
+        <div class="update-card" style="border-left-color: #555;">
+            <span class="version">v1.0.0 - 정식 출시</span>
+            <span class="date">2025.12.20</span>
+            <ul>
+                <li>2P 로컬 협동(Co-op) 모드 및 솔로 모드 구현 완료</li>
+                <li>5종의 적 유형 및 3종의 아이템 구현</li>
+                <li>기본 물리 엔진 및 파티클 이펙트 적용</li>
+            </ul>
+        </div>
+        
+        <p style="text-align: center; margin-top: 50px; color: #555;">Next Update: 랭킹 시스템 및 신규 보스 예정</p>
     </div>
 </body>
 </html>
