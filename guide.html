@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 가이드 - 2P Hardcore Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; color: #e0e0e0; font-family: 'Noto Sans KR', sans-serif; line-height: 1.6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding-bottom: 50px; }
+        h1 { color: #00ffff; font-family: 'Orbitron', sans-serif; text-shadow: 0 0 10px #00ffff; border-bottom: 2px solid #00ffff; padding-bottom: 15px; }
+        h2 { color: #ff00ff; margin-top: 40px; border-left: 5px solid #ff00ff; padding-left: 15px; font-family: 'Orbitron', sans-serif; letter-spacing: 1px; }
+        h3 { color: #ffd700; margin-top: 25px; margin-bottom: 10px; }
+        .key { display: inline-block; background: #333; color: white; padding: 4px 8px; border-radius: 4px; border: 1px solid #555; font-weight: bold; margin: 0 2px; font-family: sans-serif; font-size: 0.9em; box-shadow: 0 2px 0 #000; }
+        .box { background: #1a1a1a; padding: 25px; border-radius: 10px; border: 1px solid #333; margin-top: 15px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #00ffff; text-decoration: none; font-size: 1.1em; font-weight: bold; border: 1px solid #00ffff; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .back-btn:hover { background: #00ffff; color: black; }
+        ul { list-style-type: none; padding-left: 0; }
+        li { margin-bottom: 12px; position: relative; padding-left: 20px; }
+        li::before { content: "►"; color: #555; position: absolute; left: 0; font-size: 0.8em; top: 2px; }
+        .warning { color: #ff4444; font-weight: bold; background: rgba(255, 68, 68, 0.1); padding: 10px; border-radius: 5px; border: 1px solid #ff4444; margin-top: 10px; }
+        .item-icon { font-weight: bold; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← 게임으로 돌아가기</a>
+        
+        <h1>🎮 생존 가이드 & 조작법</h1>
+        <p>극한의 탄막 슈팅 아레나에 오신 것을 환영합니다.</p>
+
+        <div class="box">
+            <h2>🕹️ 조작 방법 (PC)</h2>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h3 style="color: #00ffff;">PLAYER 1 (BLUE)</h3>
+                    <ul>
+                        <li>이동: <span class="key">W</span> <span class="key">A</span> <span class="key">S</span> <span class="key">D</span></li>
+                        <li>스페셜 스킬: <span class="key">E</span></li>
+                        <li>메인무기: <span class="key">SPACE</span></li>
+                        <li>보조무기: <span class="key">Q</span></li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                    <h3 style="color: #ff5555;">PLAYER 2 (RED)</h3>
+                    <ul>
+                        <li>이동: <span class="key">↑</span> <span class="key">↓</span> <span class="key">←</span> <span class="key">→</span></li>
+                        <li>스페셜 스킬: <span class="key"> . </span></li>
+                        <li>메인무기: <span class="key">ENTER</span></li>
+                        <li>보조무기: <span class="key">/</span></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="color: #888; font-size: 0.9em; margin-top: 15px;">※ <b>대시(Dash)</b> : 기능은 추가 고려 중입니다</p>
+        </div>
+
+        <div class="box">
+            <h2>☠️ 게임 룰 </h2>
+            <h3>1.협동 모드 </h3>
+            <p>친구와 함께 생존하세요.(1p,2p,ai)</p>
+            <div class="warning">
+                주의: 두 명 중 <strong>한 명이라도 체력이 0이 되면 즉시 게임 오버</strong>됩니다. 
+            </div>
+
+            <h3>솔로 모드 (Solo)</h3>
+            <p>AI 드론이 파트너로 등장합니다.(1p,ai,ai)</p>
+            <ul>
+                <li>플레이어가 죽으면 게임 오버입니다.</li>
+                <li>AI 파트너가 죽으면 협동모드에도 존쟇는 보조ai는 부활조건에 맞춰 부활하지만 대체 ai는 부활이 불가합니다.</li>
+                <li><strong>AI 부활 방법:</strong> <span style="color:#00ff00">HEAL</span>이나 <span style="color:#ffd700">BOX</span> 아이템을 먹으면 AI가 풀피로 부활합니다!</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>🎁 아이템 도감</h2>
+            <ul>
+                <li><span class="item-icon" style="color:#00ff00">💚 HEAL:</span> 5%드랍; 체력 +50 회복 (AI 파트너 부활)</li>
+                <li><span class="item-icon" style="color:#ff8800">💣 BOMB:</span> 2%드랍; 화면 내 보스 제외 모든 적 즉사</li>
+                <li><span class="item-icon" style="color:#ffd700">📦 SUPER BOX(1%드랍, 보스처치시 100%):</span> 
+                    <br>1. 체력 100% 회복(사용한 플래이어만 적용)
+                    <br>2. 적 5초간 빙결 (움직임 멈춤)
+                    <br>3. 플레이어 10초간 광폭화 (연사 속도 2배)(사용한 플래이어만 적용)
+                    <br>4. 보조AI 풀피 부활
+
+                </li>
+            </ul>
+        </div>
+
+<div class="box">
+    <h2>👾 몬스터 도감</h2>
+    <p style="color: #888;">초기 생성 시점을 기준으로 한 기본 능력치 정보입니다.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+        <div style="border: 1px solid #444; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05);">
+            <strong style="color: #fff;">⚪ Chaser (추격병)</strong>
+            <p style="font-size: 0.85em; color: #bbb; margin-top: 5px;">
+                HP: 35 | ATK: 0.4 | SPD: 1.3<br>
+                기본적인 적입니다. 플레이어를 향해 정직하게 다가옵니다.
+            </p>
+        </div>
+
+        <div style="border: 1px solid #444; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05);">
+            <strong style="color: #ffff00;">🟡 Shooter (사격병)</strong>
+            <p style="font-size: 0.85em; color: #bbb; margin-top: 5px;">
+                HP: 25 | ATK: 10 | SPD: 0.8<br>
+                일정 거리를 유지하며 1.9초마다 탄환을 발사합니다.
+            </p>
+        </div>
+
+        <div style="border: 1px solid #444; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05);">
+            <strong style="color: #5588ff;">🔵 Guardian (가디언)</strong>
+            <p style="font-size: 0.85em; color: #bbb; margin-top: 5px;">
+                HP: 140 | ATK: 0.2 | SPD: 0.5<br>
+                매우 높은 체력과 전면 방패로 플레이어의 앞을 가로막습니다.
+            </p>
+        </div>
+
+        <div style="border: 1px solid #444; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05);">
+            <strong style="color: #a020f0;">🟣 Shotgunner (산탄병)</strong>
+            <p style="font-size: 0.85em; color: #bbb; margin-top: 5px;">
+                HP: 90 | ATK: 10 | SPD: 0.8<br>
+                2.5초마다 5발의 탄환을 부채꼴 모양으로 뿜어냅니다.
+            </p>
+        </div>
+
+        <div style="border: 1px solid #444; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05);">
+            <strong style="color: #ff4400;">🟠 Bomber (자폭병)</strong>
+            <p style="font-size: 0.85em; color: #bbb; margin-top: 5px;">
+                HP: 20 | ATK: Max HP의 45% | SPD: 1.3<br>
+                근접 시 빨갛게 변하며 폭발하여 큰 피해를 줍니다.
+            </p>
+        </div>
+
+        <div style="border: 1px solid #444; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05);">
+            <strong style="color: #e0e0e0;">🔘 Spider (거미)</strong>
+            <p style="font-size: 0.85em; color: #bbb; margin-top: 5px;">
+                HP: 60 | ATK: 0.4 | SPD: 1.1<br>
+                처치 시 그 자리에서 3마리의 Spiderling이 튀어나옵니다.
+            </p>
+        </div>
+
+        <div style="border: 1px solid #444; padding: 15px; border-radius: 8px; background: rgba(255,255,255,0.05);">
+            <strong style="color: #ffffff; text-decoration: underline;">🕷️ Spiderling (새끼 거미)</strong>
+            <p style="font-size: 0.85em; color: #bbb; margin-top: 5px;">
+                HP: 15 | ATK: 0.4 | SPD: 2.2<br>
+                거미가 죽을 때 등장합니다. 체력은 낮지만 이동 속도가 매우 빠릅니다.
+            </p>
+        </div>
+
+        <div style="grid-column: 1 / -1; border: 2px solid #ff0044; padding: 15px; border-radius: 8px; background: rgba(255,0,68,0.1);">
+            <strong style="color: #ff0044; font-size: 1.1em;">🔴 BOSS (보스)</strong>
+            <p style="font-size: 0.9em; color: #eee; margin-top: 5px;">
+                HP: 800 | ATK: 0.8 | SPD: 0.5<br>
+                600점마다 등장. 처치 시 <strong>SUPER BOX</strong>를 드롭하고 스페셜 게이지를 모두 채워줍니다.
+            </p>
+        </div>
+    </div>
+</div>        
+
+    </div>
+</body>
+</html>
